@@ -1,0 +1,20 @@
+# IntelliJ project files
+*.iml
+*.iws
+*.ipr
+.idea/
+# Maven build folder
+target
+# Mac HFS+ files
+.DS_Store
+# Unix editor backup files
+*~
+*.swp
+.gradle/
+build/
+.classpath
+.project
+.settings
+.gradle
+BUILD_INFO.*
+out

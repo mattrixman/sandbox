@@ -1,0 +1,33 @@
+group='com.clover.sandbox'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+subprojects{
+    group = 'com.clover.sandbox.matrixman'
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+
+evaluationDependsOnChildren()
+
+task runDefaultTasks {
+    subprojects.each { subproject ->
+        subproject.defaultTasks.each {
+            dependsOn subproject.path + ":" + it
+        }
+    }
+}
+
+defaultTasks 'runDefaultTasks'
