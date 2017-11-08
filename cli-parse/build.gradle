@@ -10,6 +10,7 @@ repositories{
 
 dependencies {
     compile group: 'io.airlift', name: 'airline', version: '0.8'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
 }
 
 jar {
